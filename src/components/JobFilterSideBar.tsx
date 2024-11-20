@@ -38,7 +38,7 @@ export default async  function JobFilterSideBar({defaultValues}:JobFilterValuesP
     )) as string[] 
 
     return <aside className="md:w-[260px] p-4 sticky top-0 h-fit bg-background border rounded-lg">
-        <form action={filterJobs}>
+        <form action={filterJobs} key={JSON.stringify(defaultValues)}>
             <div className="space-y-4">
                 <div className="flex flex-col gap-2">
                 <Label htmlFor="query">
